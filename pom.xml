@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.redpill-linpro.alfresco</groupId>
-    <artifactId>alfresco-base</artifactId>
-    <version>1.1.1.22</version>
-  </parent>
   <groupId>org.redpill-linpro.alfresco.numbering</groupId>
   <artifactId>alfresco-numbering</artifactId>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <name>Alfresco Numbering</name>
   <packaging>pom</packaging>
   <properties>
     <alfresco.groupId>org.alfresco</alfresco.groupId>
-    <alfresco.version>4.2.f</alfresco.version>
-    <java.source.version>1.8</java.source.version>
-    <java.target.version>1.8</java.target.version>
+    <alfresco.version>23.2</alfresco.version>
+    <java.source.version>17</java.source.version>
+    <java.target.version>17</java.target.version>
+    <tomcat.repo.home>usr/local/tomcat</tomcat.repo.home>
+    <tomcat.repo.port>8080</tomcat.repo.port>
   </properties>
   <modules>
     <module>repo</module>
@@ -53,8 +50,16 @@
   </issueManagement>
   <repositories>
     <repository>
-      <id>redpill-public</id>
-      <url>https://maven.redpill-linpro.com/nexus/content/groups/public</url>
+      <id>alfresco-public</id>
+      <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+    </repository>
+    <repository>
+      <id>alfresco-public-snapshots</id>
+      <url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>daily</updatePolicy>
+      </snapshots>
     </repository>
   </repositories>
 </project>
