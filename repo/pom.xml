@@ -21,6 +21,7 @@
     <dependency>
       <groupId>${alfresco.groupId}</groupId>
       <artifactId>alfresco-repository</artifactId>
+      <version>23.2.0.60</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -38,6 +39,7 @@
           <groupId>junit</groupId>
         </exclusion>
       </exclusions>
+      <version>2.13.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -45,6 +47,12 @@
       <artifactId>httpclient</artifactId>
       <version>4.5.13</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.redpill-linpro.alfresco</groupId>
+      <artifactId>alfresco-test-repo</artifactId>
+      <version>1.0.16</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <build>

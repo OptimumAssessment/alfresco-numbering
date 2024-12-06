@@ -22,14 +22,15 @@ import org.alfresco.service.cmr.repository.NodeService;
 import org.alfresco.service.cmr.repository.StoreRef;
 import org.alfresco.service.namespace.NamespaceService;
 import org.alfresco.service.namespace.QName;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.redpill.alfresco.numbering.component.NumberingComponent;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 
 public abstract class AbstractNumberingPolicy implements NumberingPolicy, OnAddAspectPolicy, OnMoveNodePolicy, InitializingBean {
 
-  private static final Logger LOG = Logger.getLogger(AbstractNumberingPolicy.class);
+  private static final Logger LOG = LogManager.getLogger(AbstractNumberingPolicy.class);
 
   protected PolicyComponent policyComponent;
   protected NodeService nodeService;

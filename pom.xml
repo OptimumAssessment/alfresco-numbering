@@ -61,6 +61,10 @@
         <updatePolicy>daily</updatePolicy>
       </snapshots>
     </repository>
+    <repository>
+      <id>redpill-public</id>
+      <url>https://maven.redpill-linpro.com/nexus/content/groups/public</url>
+    </repository>
   </repositories>
 </project>
 
