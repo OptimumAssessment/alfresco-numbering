@@ -17,8 +17,8 @@ import org.alfresco.service.cmr.repository.NodeService;
 import org.alfresco.service.cmr.search.SearchService;
 import org.alfresco.service.namespace.NamespaceService;
 import org.alfresco.service.namespace.QName;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 
@@ -33,7 +33,7 @@ public class NodeNumberingStorageImpl implements NumberingStorage, InitializingB
   protected static final String NUMBERING_FOLDER_NAME = "Numbering";
   private static final QName NUMBERING_FOLDER_QNAME = QName.createQName(NamespaceService.CONTENT_MODEL_1_0_URI, NUMBERING_FOLDER_NAME);
   protected static final QName NUMBERING_PROPERTY = QName.createQName(NamespaceService.APP_MODEL_1_0_URI, "counterValue");
-  private static final Logger LOG = LogManager.getLogger(NodeNumberingStorageImpl.class);
+  private static final Logger LOG = LoggerFactory.getLogger(NodeNumberingStorageImpl.class);
 
   protected static long DEFAULT_LOCK_TTL = 30000L;
   protected ThreadLocal<String> lockThreadLocal = new ThreadLocal<String>();

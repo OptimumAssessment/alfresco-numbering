@@ -12,8 +12,8 @@ import org.alfresco.service.cmr.repository.NodeRef;
 import org.alfresco.service.cmr.repository.NodeService;
 import org.alfresco.service.namespace.NamespaceService;
 import org.alfresco.service.namespace.QName;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.redpill.alfresco.numbering.decorator.Decorator;
 import org.redpill.alfresco.numbering.storage.NumberingStorage;
 import org.springframework.beans.factory.InitializingBean;
@@ -27,7 +27,7 @@ import org.springframework.util.Assert;
  */
 public class NumberingComponentImpl implements NumberingComponent, InitializingBean {
 
-  private static final Logger LOG = LogManager.getLogger(NumberingComponentImpl.class);
+  private static final Logger LOG = LoggerFactory.getLogger(NumberingComponentImpl.class);
 
   protected Repository repositoryHelper;
   protected NodeService nodeService;

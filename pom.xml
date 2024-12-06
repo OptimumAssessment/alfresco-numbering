@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.redpill-linpro.alfresco.numbering</groupId>
   <artifactId>alfresco-numbering</artifactId>
-  <version>1.4.0</version>
+  <version>1.4.1</version>
   <name>Alfresco Numbering</name>
   <packaging>pom</packaging>
   <properties>
@@ -53,6 +53,16 @@
   </issueManagement>
   <repositories>
     <repository>
+      <id>Optimum</id>
+      <url>https://pkgs.dev.azure.com/citrusandriessen/_packaging/Optimum/maven/v1</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
       <id>alfresco-public</id>
       <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
     </repository>
@@ -69,6 +79,18 @@
       <url>https://maven.redpill-linpro.com/nexus/content/groups/public</url>
     </repository>
   </repositories>
+  <distributionManagement>
+    <repository>
+      <id>Optimum</id>
+      <url>https://pkgs.dev.azure.com/citrusandriessen/_packaging/Optimum/maven/v1</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </distributionManagement>
 </project>
 
 
