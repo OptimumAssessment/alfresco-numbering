@@ -235,12 +235,12 @@ public abstract class AbstractNumberingPolicy implements NumberingPolicy, OnAddA
   
   @Override
   public void afterPropertiesSet() throws Exception {
-    Assert.notNull(behaviourFilter);
-    Assert.notNull(numberingComponent);
-    Assert.notNull(lockService);
-    Assert.notNull(dictionaryService);
-    Assert.notNull(nodeService);
-    Assert.notNull(policyComponent);
+    Assert.notNull(behaviourFilter, "behaviourFilter");
+    Assert.notNull(numberingComponent, "numberingComponent");
+    Assert.notNull(lockService, "lockService");
+    Assert.notNull(dictionaryService, "dictionaryService");
+    Assert.notNull(nodeService, "nodeService");
+    Assert.notNull(policyComponent, "policyComponent");
   }
 
 }

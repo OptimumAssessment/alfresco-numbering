@@ -104,9 +104,9 @@ public class AttributeNumberingStorageImpl implements NumberingStorage, Initiali
 
   @Override
   public void afterPropertiesSet() throws Exception {
-    Assert.notNull(jobLockService);
-    Assert.notNull(retryingTransactionHelper);
-    Assert.notNull(attributeService);
+    Assert.notNull(jobLockService, "jobLockService");
+    Assert.notNull(retryingTransactionHelper, "retryingTransactionHelper");
+    Assert.notNull(attributeService, "attributeService");
   }
 
 }
